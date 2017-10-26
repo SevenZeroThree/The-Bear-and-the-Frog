@@ -10,26 +10,7 @@
             <p>contact@thebearnandthefrog.com</p>
         </div>
         <div class="col">
-            <h5>Categories</h5>
-            <ul class="list-group">
-                {% assign tags_list = site.categories %}  
-                    {% if tags_list.first[0] == null %}
-                    {% for tag in tags_list %} 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="#{{ tag }}" class="text-dark"></a>{{ tag | capitalize }}</a>
-                            <span class="badge badge-secondary">{{ site.tags[tag].size }}</span>
-                        </li>
-                    {% endfor %}
-                    {% else %}
-                    {% for tag in tags_list %} 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="#{{ tag[0] }}" class="text-dark">{{ tag[0] | capitalize }}</a>
-                            <span class="badge badge-secondary">{{ tag[1].size }}</span>
-                        </li>
-                    {% endfor %}
-                    {% endif %}
-                {% assign tags_list = nil %}
-            </ul>
+            
         </div>
     </div>
     <hr />
