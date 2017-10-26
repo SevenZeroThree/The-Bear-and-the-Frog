@@ -1,26 +1,6 @@
 {% if index %}
 <h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark display-4 font-weight-light" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
-<div class="row">
-    <div class="col-6">
-        <div class="row">
-            <div class="col">
-                {% octicon calendar height:25 class:"img-fluid float-left mr-1" %}
-                <time datetime="{{ post.date | datetime | date_to_xmlschema }}" {% if updated %}data-updated="true"{% endif %} itemprop="datePublished">{{ post.date | date: "%B %e, %Y" }}</time>
-            </div>
-            <div class="col">
-                    {% octicon tag height:25 class:"img-fluid float-left mr-1" %}
-                    <ul class="list-inline">
-                        {% for tag in post.tags %}
-                        <li class="list-inline-item">{{ tag }}</li>
-                        {% endfor %}
-                    </ul>
-            </div>
-        </div>   
-    </div>
-    <div class="col-6">
-
-    </div>
-</div>
+{% include meta.html %}
      
 <div class="clearfix"></div>
 <div class="entry-content" itemprop="articleBody">
