@@ -2,7 +2,7 @@
 layout: post
 title: "Testing the Tags"
 date: 2017-10-01
-categories: [test]
+categories: [tag, test, asdf]
 tags: [hello, 1, 2]
 ---
 
