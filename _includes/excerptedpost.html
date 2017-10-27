@@ -1,0 +1,8 @@
+<h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark display-4 font-weight-light" itemprop="url">{{ post.title | titlecase }}</a></h1>
+{% include meta.html %}
+     
+<div class="clearfix"></div>
+<div class="entry-content" itemprop="articleBody">
+    {{ post.excerpt }}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">{{ site.excerpt_link }}</a>
+</div>
