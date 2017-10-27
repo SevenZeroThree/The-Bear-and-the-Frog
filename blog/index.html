@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<ul>
-    {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            {{ post.excerpt }}
-        </li>
-    {% endfor %}
-</ul>
+
+<div class="row">
+    <div class="col-sm-8">
+        {% include postlist.html %}
+    </div>
+    <div class="col-sm-4">
+        {% include sidebar.html %}
+    </div>
+</div>
