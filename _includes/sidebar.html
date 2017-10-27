@@ -1,0 +1,45 @@
+<aside>
+    <h5>Categories</h5>
+    {% assign category_list = site.categories %}  
+        {% if category_list.first[0] == null %}
+        {% for category in category_list %} 
+            <div class="row">
+                <div class="col">
+                    <a href="#{{ category }}" class="text-dark text-uppercase"></a>{{ category | capitalize }}</a>
+                </div>
+                <div class="col text-right">
+                    <span class="badge badge-light">{{ category_list[category].size }}</span>
+                </div>
+            </div>
+            <hr />
+        {% endfor %}
+        {% else %}
+        {% for category in category_list %} 
+            <div class="row">
+                <div class="col">
+                    <a href="#{{ category[0] }}" class="text-muted text-uppercase">{{ category[0] | capitalize }}</a>
+                </div>
+                <div class="col text-right">
+                    <span class="badge badge-light">{{ category[1].size }}</span>
+                </div>
+            </div>
+            <hr />
+        {% endfor %}
+        {% endif %}
+    {% assign category_list = nil %}
+    <h5>Tags</h5>
+    <div class="h4">
+        {% assign category_list = site.tags %}  
+        {% if category_list.first[0] == null %}
+        {% for tag in category_list %} 
+            <a href="#{{ tag }}" class="badge badge-light text-muted">{{ tag | capitalize }}</a>
+        {% endfor %}
+        {% else %}
+        {% for tag in category_list %}
+            
+            <a href="#{{ tag[0] }}" class="badge badge-light text-muted">{{ tag[0] | capitalize }}</a>
+        {% endfor %}
+        {% endif %}
+    {% assign category_list = nil %}
+    </div>
+</aside>
