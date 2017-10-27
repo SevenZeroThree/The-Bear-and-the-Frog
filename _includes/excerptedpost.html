@@ -3,6 +3,16 @@
      
 <div class="clearfix"></div>
 <div class="entry-content" itemprop="articleBody">
-    {{ post.excerpt }}
+    <div class="row">
+        <div class="col">
+            {% capture thumbnail %}{% if post.thumbnail_image %}{{ post.thumbnail_image }}{% else %}/content/images/noimage.png{% endif %}{% endcapture %}
+            <img width="340" height="237" src="{{ thumbnail | prepend: site.baseurl}}" />
+        </div>
+        <div class="col">
+            {{ post.excerpt }}
+        </div>
+    </div>
+    
+    
     <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">{{ site.excerpt_link }}</a>
 </div>
