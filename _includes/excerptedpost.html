@@ -1,5 +1,3 @@
-<h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark display-4 font-weight-light" itemprop="url">{{ post.title | titlecase }}</a></h1>
-     
 <div class="entry-content" itemprop="articleBody">
     <div class="row">
         <div class="col">
@@ -7,11 +5,10 @@
             <img width="340" height="237" src="{{ thumbnail | prepend: site.baseurl}}" />
         </div>
         <div class="col">
+            <h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark font-weight-light" itemprop="url">{{ post.title | titlecase }}</a></h1>
             {{ post.excerpt }}
+            <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">{{ site.excerpt_link }}</a>
             {% include meta.html %}
         </div>
     </div>
-    
-    
-    <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">{{ site.excerpt_link }}</a>
 </div>
