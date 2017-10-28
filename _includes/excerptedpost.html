@@ -1,7 +1,5 @@
 <h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark display-4 font-weight-light" itemprop="url">{{ post.title | titlecase }}</a></h1>
-{% include meta.html %}
      
-<div class="clearfix"></div>
 <div class="entry-content" itemprop="articleBody">
     <div class="row">
         <div class="col">
@@ -10,6 +8,7 @@
         </div>
         <div class="col">
             {{ post.excerpt }}
+            {% include meta.html %}
         </div>
     </div>
     

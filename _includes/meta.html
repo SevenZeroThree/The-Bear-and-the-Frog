@@ -1,21 +1,14 @@
 <div class="row">
-    <div class="col-6">
-        <div class="row">
-            <div class="col">
-                {% octicon calendar height:25 class:"img-fluid float-left mr-1" %}
+    <div class="col">
+        <ul class="list-unstyled">
+            <li>
+                {% octicon calendar height:25 class:"img-fluid mr-1" %}
                 <time datetime="{{ post.date | datetime | date_to_xmlschema }}" {% if updated %}data-updated="true"{% endif %} itemprop="datePublished">{{ post.date | date: "%B %e, %Y" }}</time>
-            </div>
-            <div class="col">
-                    {% octicon tag height:25 class:"img-fluid float-left mr-1" %}
-                    <ul class="list-inline">
-                        {% for tag in post.tags %}
-                        <li class="list-inline-item">{{ tag }}</li>
-                        {% endfor %}
-                    </ul>
-            </div>
-        </div>   
-    </div>
-    <div class="col-6">
-
+            </li>
+            <li>
+                {% octicon tag height:25 class:"img-fluid mr-1" %}
+                {{ post.categories[0] }}
+            </li>
+        </ul>
     </div>
 </div>
