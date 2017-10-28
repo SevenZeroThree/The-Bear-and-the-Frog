@@ -1,8 +1,8 @@
 <div class="entry-content" itemprop="articleBody">
     <div class="row">
         <div class="col">
-            {% capture thumbnail %}{% if post.thumbnail_image %}{{ post.thumbnail_image }}{% else %}/content/images/noimage.png{% endif %}{% endcapture %}
-            <img width="340" height="237" src="{{ thumbnail | prepend: site.baseurl}}" />
+            {% capture thumbnail %}{% if post.thumbnail_image %}{{ post.thumbnail_image }}{% else %}/content/images/noimage2.jpg{% endif %}{% endcapture %}
+            <img class="img-thumbnail img-fluid" src="{{ thumbnail | prepend: site.baseurl}}" />
         </div>
         <div class="col">
             <h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark font-weight-light" itemprop="url">{{ post.title | titlecase }}</a></h1>
