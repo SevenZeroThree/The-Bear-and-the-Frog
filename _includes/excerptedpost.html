@@ -6,8 +6,7 @@
         </div>
         <div class="col-sm-7">
             <h1 class="title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark font-weight-light" itemprop="url">{{ post.title | titlecase }}</a></h1>
-            {{ post.excerpt }}
-            <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">{{ site.excerpt_link }}</a>
+            <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | truncate: 203 }}</p>
             {% include meta.html %}
         </div>
     </div>
