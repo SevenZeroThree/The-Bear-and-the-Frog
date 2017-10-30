@@ -26,9 +26,11 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark h6" href="{{ site.baseurl }}/archive/">Archive</a>
                 </li>
+                {% if site.feature_toggles.show_contact_link %}
                 <li class="nav-item">
                     <a class="nav-link text-dark h6" href="https://github.com/703group/The-Bear-and-the-Frog/issues/new">Contact</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </div>
