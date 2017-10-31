@@ -17,5 +17,11 @@ paginate_path: "page/:num"
 category_dir: categories
 excerpt_link: "Read More"
 
+# 
+# Feature Toggles
+#
+feature_toggles:
+  show_contact_link: false
+
 gems:
   - jekyll-octicons

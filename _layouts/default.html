@@ -24,7 +24,16 @@
 <body>
 	<header>{% include header.html %}</header>
 	<div class="container">
-		<div id="content">{{ content }}</div>
+		<div class="row">
+				<div class="col-sm-9">
+						<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+							{{ content }}
+						</article>
+				</div>
+				<div class="col-sm-3">
+						{% include sidebar.html %}
+				</div>
+		</div>
 	</div>
 	<footer class="bg-light">{% include footer.html %}</footer>
 </body>

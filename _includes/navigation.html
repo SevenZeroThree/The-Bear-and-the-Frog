@@ -5,9 +5,11 @@
     <li class="nav-item">
         <a class="nav-link text-dark" href="{{ site.baseurl }}/blog/">Blog</a>
     </li>
+    {% if site.feature_toggles.show_contact_link %}
     <li class="nav-item">
         <a class="nav-link text-dark" href="https://github.com/703group/The-Bear-and-the-Frog/issues/new">Contact</a>
     </li>
+    {% endif %}
 </ul>
 
 <!-- 
